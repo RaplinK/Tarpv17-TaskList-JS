@@ -20,9 +20,9 @@ function loadEventListener(){
 }
 function filterTasks(e){
     const text = e.target.value.toLowerCase();
-    console.log(text);
+    
 
-    Array.from(document.querySelector('.collection')).forEach(function(task){
+    document.querySelectorAll(document.querySelector('.collection')).forEach(function(task){
         const item = task.firstChild.textContent;
         if(item.toLowerCase().indexOf(text) != -1){
             task.style.display = 'block';
